@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Hostiteľ: localhost:3306
+-- Čas generovania: Pi 16.Dec 2022, 12:02
+-- Verzia serveru: 10.4.27-MariaDB
+-- Verzia PHP: 8.0.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Databáza: `aaa`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Štruktúra tabuľky pre tabuľku `rok_2022`
+--
+
+CREATE TABLE `rok_2022` (
+  `ID` int(11) NOT NULL,
+  `stredisko` varchar(255) DEFAULT NULL,
+  `NAZEV_POZADOVANEHO_ZBOZI` varchar(255) DEFAULT NULL,
+  `POCET_KUSU` varchar(255) DEFAULT NULL,
+  `KOMODITA` varchar(255) DEFAULT NULL,
+  `PRIORITA_NAKUPU` varchar(255) DEFAULT NULL,
+  `UMISTENI` varchar(255) DEFAULT NULL,
+  `ORIENTACNI_CENA` varchar(255) DEFAULT NULL,
+  `PREDBEZNA_DOBA_NAKUPU` varchar(255) DEFAULT NULL,
+  `vedouci` int(6) DEFAULT NULL,
+  `VEDOUCI_USEKU` varchar(255) DEFAULT NULL,
+  `KONTAKTNI_OSOBA` varchar(255) DEFAULT NULL,
+  `NAKOUPENO` varchar(255) DEFAULT NULL,
+  `POMUCKY` varchar(255) DEFAULT NULL,
+  `TIP` varchar(255) DEFAULT NULL,
+  `SKUTECNA_CENA` int(4) UNSIGNED DEFAULT NULL,
+  `POZNAMKA` varchar(255) DEFAULT NULL,
+  `oc` int(11) DEFAULT NULL,
+  `prijmeni` varchar(250) DEFAULT NULL,
+  `rank_1` varchar(250) DEFAULT NULL,
+  `rank_2` varchar(250) DEFAULT NULL,
+  `rank_3` varchar(250) DEFAULT NULL,
+  `rank_5` varchar(250) DEFAULT NULL,
+  `dodavatel_rank_4` varchar(250) DEFAULT NULL,
+  `objed_cislo_rank_4` varchar(250) DEFAULT NULL,
+  `rank_4` varchar(250) DEFAULT NULL,
+  `email` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `rok_2022`
+--
+
+INSERT INTO `rok_2022` (`ID`, `stredisko`, `NAZEV_POZADOVANEHO_ZBOZI`, `POCET_KUSU`, `KOMODITA`, `PRIORITA_NAKUPU`, `UMISTENI`, `ORIENTACNI_CENA`, `PREDBEZNA_DOBA_NAKUPU`, `vedouci`, `VEDOUCI_USEKU`, `KONTAKTNI_OSOBA`, `NAKOUPENO`, `POMUCKY`, `TIP`, `SKUTECNA_CENA`, `POZNAMKA`, `oc`, `prijmeni`, `rank_1`, `rank_2`, `rank_3`, `rank_5`, `dodavatel_rank_4`, `objed_cislo_rank_4`, `rank_4`, `email`) VALUES
+(25, '', 'židle', '2', 'nabytek', 'urgent', 'učebna', '500', '2022-11', 134, NULL, 'Gren', NULL, NULL, 'https://it.soubosonohy.cz:444/testing/index.php', NULL, '', 9002, 'Gren', NULL, NULL, NULL, NULL, NULL, NULL, NULL, ''),
+(26, '125', 'židle', '2', 'nabytek', 'nespecha', 'učebna', '1000', '2022-11', 134, NULL, 'Jašek', NULL, NULL, 'https://it.soubosonohy.cz:444/testing/index.php', NULL, 'pokus', 293, 'Jašek', NULL, NULL, NULL, NULL, NULL, NULL, 'zh', ''),
+(27, '105_T', 'PC', '1', 'pocitace_notebooky', 'urgent', '26a', '15000', '2022-12', 134, NULL, 'Prachařová', NULL, NULL, '', NULL, '', 637, 'Prachařová', NULL, NULL, NULL, NULL, NULL, NULL, NULL, ''),
+(28, '125', 'PC', '1', 'pocitace_notebooky', 'urgent', '26A', '15000', '2022-12', 134, '', 'Jašek', NULL, 'ano', '', NULL, '', 293, 'Jašek', 'schvaluji', 'schvaluji', 'schvaluji', NULL, 'xxx', '', 'ocekava_se', '');
+
+--
+-- Kľúče pre exportované tabuľky
+--
+
+--
+-- Indexy pre tabuľku `rok_2022`
+--
+ALTER TABLE `rok_2022`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT pre exportované tabuľky
+--
+
+--
+-- AUTO_INCREMENT pre tabuľku `rok_2022`
+--
+ALTER TABLE `rok_2022`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
